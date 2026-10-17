@@ -30,11 +30,11 @@ services:
       # OSS 配置
       MINIO_ADDRESS: oss-cn-hangzhou.aliyuncs.com
       MINIO_PORT: 443 # 使用oss时一定要设置port，否则默认是9000
-      MINIO_ACCESS_KEY_ID: YOUR_ACCESS_KEY_ID # 替换为自己的access key id
-      MINIO_SECRET_ACCESS_KEY: YOUR_SECRET_ACCESS_KEY # 替换为自己的secret access key
+      MINIO_ACCESS_KEY_ID: ${OSS_AK_ID} # 替换为自己的access key id
+      MINIO_SECRET_ACCESS_KEY: ${OSS_AK_SECRET} # 替换为自己的secret access key
       MINIO_USE_VIRTUAL_HOST: true # 使用虚拟主机模式路径
       MINIO_USE_SSL: true
-      MINIO_BUCKET_NAME: milvus-alioss
+      MINIO_BUCKET_NAME: mildoc-milvus-db-nina
       MINIO_ROOT_PATH: milvus_db # 指定存储路径
       MINIO_REGION: cn-hangzhou
       MINIO_CLOUD_PROVIDER: aliyun # 指定云服务商
